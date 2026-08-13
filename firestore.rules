@@ -1,0 +1,14 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // All reads and writes happen server-side through the Firebase Admin SDK
+    // (lib/firebase/admin.ts), which bypasses these rules entirely using
+    // service-account credentials. This denies the client SDK direct access
+    // to Firestore as a defense-in-depth backstop, since product/order data
+    // integrity is enforced in server actions and route handlers, not here.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

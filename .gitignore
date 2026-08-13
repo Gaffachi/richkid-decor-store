@@ -32,9 +32,16 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.local.example
 
 # vercel
 .vercel
+
+# source photos (already uploaded to Cloudinary; not needed at runtime)
+/Pictures
+
+# Claude Code session/tool state (not project code)
+/.claude
 
 # typescript
 *.tsbuildinfo
