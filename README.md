@@ -149,8 +149,7 @@ The account can then sign in and visit `/admin`.
 
 ## Deploying
 
-Live at **https://richkid-decor-store.vercel.app**. Hosted on Vercel, connected
-to this GitHub repo — pushes to `master` deploy to production automatically.
-Environment variables are managed in the Vercel project settings (mirrors
-`.env.local`); the live domain must also be added to Firebase Console →
-Authentication → Settings → Authorized domains for login/register to work.
+Live at **https://richkid-decor-store.vercel.app** (Vercel project
+`babiallc/richkid-decor-store`), connected to this repo — every push to
+`master` auto-deploys to production. Environment variables are set in the
+Vercel project settings (mirroring `.env.local`).
